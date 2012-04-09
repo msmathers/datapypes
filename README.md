@@ -4,7 +4,7 @@
 
 ```python
 # Retrieve news from GoogleNews, store in MongoDB
-News(query='Japan').latest(GoogleNews()).save(MongoDB())
+News(query='Japan').latest(GoogleNews()).save(MongoDB(host='127.0.0.1'))
 ```
 
 ```python
