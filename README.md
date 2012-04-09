@@ -3,20 +3,23 @@
 **datapypes** provides the building blocks to enable the following:
 
 ```python
+# Retrieve news from GoogleNews, store in MongoDB
 News(query='stuff').latest(GoogleNews()).save(MongoDB())
 ```
 
 ```python
+# Create a post, send to Twitter & Tumblr
 Post(text='I did something interesting').save(
   Twitter(username='tweet_user', password='tweet_pass'),
   Tumblr(username='tumblr_user', password='tumblr_pass'))
 ```
 
 ```python
+# Get SoundCloud, YouTube links for a track, post to Twitter, save to MongoDB
 Track(artist="Meshuggah", title="New Millenium Cyanide Christ").get(
   SoundCloud(), Youtube()).save(
     Twitter(username='tweet_user', password='tweet_pass'),
-    MongoDB(host='127.0.0.1')
+    MongoDB(host='127.0.0.1'))
 ```
 
 See examples.py for implementation details.
