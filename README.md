@@ -4,7 +4,7 @@
 
 ```python
 # Retrieve news from GoogleNews, store in MongoDB
-News(query='stuff').latest(GoogleNews()).save(MongoDB())
+News(query='Japan').latest(GoogleNews()).save(MongoDB())
 ```
 
 ```python
@@ -28,7 +28,7 @@ See examples.py for implementation details.
 
 Build your pipeline by subclassing these classes:
 
-* **Attribute** - A model attribute, i.e. title, author, date
+* **Attribute** - A typed model attribute, i.e. title, author, date
 * **Model** - A data model, i.e. Article, Video
 * **Set** - A set of data models, i.e. News, Videos
 * **Source** - A data source, i.e. Google News, Twitter
